@@ -33,7 +33,7 @@ programa {
 
     se (opcao == 2) {
       operacao("Grau Fahrenheit para Celsius")
-      result = fator1 - 32 * 5 / 9
+      result = (fator1 - 32) * 5 / 9
       escreva("\nO resultado é:\t", result, "\n")
     }
   
