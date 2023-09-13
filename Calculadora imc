@@ -1,0 +1,32 @@
+programa {
+  funcao inicio() {
+    real peso
+    real altura
+    real result
+    
+    escreva("Calculadora de IMC\n")
+    escreva("Qual o a sua peso\n")
+    escreva("resposta:\n\n")
+    leia(peso)
+
+    escreva("Qual sua altura em metros\n")
+    escreva("resposta:\n\n")
+    leia(altura)
+
+
+    result = peso/(altura*altura)
+     escreva ("Reaultado:\t",result, "\n")
+
+    se (result > 18.5 e result < 24.9) {
+      escreva ("está normal")
+    }
+    se (result < 18.5 ) {
+    escreva ("está abaixo do peso")
+    }
+    se(result > 24.9) {
+     escreva ("acima")
+    }
+
+  
+  }
+}
