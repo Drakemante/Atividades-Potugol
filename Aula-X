@@ -1,0 +1,54 @@
+// Calculadora de temperatura
+programa {
+  inclua biblioteca Matematica --> mat
+  caracter opcao //variavel que guarda a opção de operador escolhida
+  real capital
+  real taxa
+  real tempo
+  real result // variavel que guarda o resultado
+  logico reiniciar = verdadeiro //variavel lógica que guarada a opção de reiniciar ou não a calculadora
+
+// Função que gera texto personalizado de acordo com a escolha da operação.
+  funcao operacao(cadeia tipoOperacao){
+    limpa() // limpa tudo do console escrito antes dele
+    escreva("Calculadora de\t", tipoOperacao, "\n")
+    escreva("\nDigite o primeiro fator:\t\n")
+    escreva("resposta:\t")
+    leia(fator1)
+    escreva("\nDigite o segundo fator:\n")
+    escreva("resposta:\t")
+  }
+
+  funcao calcular(){
+    limpa() // limpa tudo do console escrito antes dele
+    escreva("Calculadora básica\n")
+    escreva("\nEscolha a operação:\n")
+    escreva("1 - Calculadora de Juros Compostos\n")
+  
+escreva ("Capital\n")
+escreva("resposta:")
+leia (capital)
+escreva ("Taxa\n")
+escreva ("resposta:")
+leia (taxa)
+escreva ("Tempo\n")
+escreva ("resposta:")
+leia (tempo)
+
+      result = capital * mat.potencia(1 + taxa,tempo)
+      escreva("\nO resultado é:\t", result, "\n")
+
+    }
+  
+  
+
+  funcao inicio() {
+    enquanto (reiniciar) {
+      calcular()
+      escreva("\nDeseja calcular novamente? digite 'verdadeiro' para sim e 'falso' para não:\n")
+      escreva("Resposta:\t")
+      leia(reiniciar)
+    }
+  }
+
+}
