@@ -1,0 +1,41 @@
+programa {
+
+   logico reiniciar = verdadeiro
+
+  funcao reiniciar(){
+    cadeia respostaReiniciar
+
+    escreva("\n\nPara calcular novamente digite 's' ou 'sim' ou qualquer letra para finalizar\n")
+    escreva("Resposta:\t")
+    leia(respostaReiniciar)
+
+    se (respostaReiniciar == "s" ou respostaReiniciar == "S" ou respostaReiniciar == "sim" ou respostaReiniciar == "Sim" ou respostaReiniciar == "SIM"){
+      reiniciar = verdadeiro
+    }
+    senao{
+      reiniciar = falso
+    }
+  }
+
+  funcao inicio() {
+    real nota1
+    real nota2
+    real nota3
+    real nota4
+    real result
+
+
+    escreva ("Qual a Nota 1\n")
+    leia (nota1)
+    escreva("Qual a Nota 2\n")
+    leia (nota2)
+    escreva ("Qual a Nota3\n")
+    leia (nota3)
+    escreva ("Qual a Nota 4\n")
+    leia (nota4)
+
+    result = (nota1 + nota2 + nota3+ nota4) / 4
+escreva("Resultado\n", result)
+reiniciar()
+  }
+}
