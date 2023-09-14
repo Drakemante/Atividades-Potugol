@@ -18,13 +18,18 @@ programa {
       reiniciar = falso
     }
 
+   
+   contador = 0
+
   }
 
   funcao inicio() {
     inteiro numero
-  escreva ("Olá\nDescubra o número de 1 a 100\n")
+    sorteio = u.sorteia(1, 100)
+  escreva ("Olá\nVamos jogar\nVocê tem 10 chances para descobrir o número de 1 a 100\n")
 
 enquanto (contador < 10){
+  
 escreva ("digite um numero\n")
 leia (numero)
   
@@ -32,6 +37,7 @@ leia (numero)
 se (numero == sorteio){
   escreva ("Acertou\n")
   contador ++
+  reiniciar()
 }
 
 
@@ -45,16 +51,15 @@ se(numero < sorteio){
   contador ++
 }
 
+se(contador == 10){
+  escreva ("Desprovido de inteligencia\n")
+  reiniciar()
+}
+}
+
 }
 
 
 }
 
-
-
-
-
-
-
-}
 
