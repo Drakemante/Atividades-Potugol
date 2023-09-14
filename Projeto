@@ -1,0 +1,42 @@
+programa {
+  inclua biblioteca Util --> u
+  inteiro sorteio = u.sorteia(1, 100)
+  logico reiniciar = verdadeiro
+
+  funcao reiniciar(){
+    cadeia respostaReiniciar
+
+    escreva("\n\nPara calcular novamente digite 's' ou 'sim' ou qualquer letra para finalizar\n")
+    escreva("Resposta:\t")
+    leia(respostaReiniciar)
+
+    se (respostaReiniciar == "s" ou respostaReiniciar == "S" ou respostaReiniciar == "sim" ou respostaReiniciar == "Sim" ou respostaReiniciar == "SIM"){
+      reiniciar = verdadeiro
+    }
+    senao{
+      reiniciar = falso
+    }
+
+  }
+
+  funcao inicio() {
+    inteiro numero
+  escreva ("Olá\nDescubra o número de 1 a 100\n")
+  leia (numero)
+
+se (numero == u){
+  escreva ("Acertou")
+}
+senao {
+  escreva ("Errou")
+}
+}
+
+
+
+
+
+
+
+}
+
