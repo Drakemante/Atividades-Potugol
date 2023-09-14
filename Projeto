@@ -2,6 +2,7 @@ programa {
   inclua biblioteca Util --> u
   inteiro sorteio = u.sorteia(1, 100)
   logico reiniciar = verdadeiro
+  inteiro contador = 0
 
   funcao reiniciar(){
     cadeia respostaReiniciar
@@ -22,14 +23,31 @@ programa {
   funcao inicio() {
     inteiro numero
   escreva ("Olá\nDescubra o número de 1 a 100\n")
-  leia (numero)
 
-se (numero == u){
-  escreva ("Acertou")
+enquanto (contador < 10){
+escreva ("digite um numero\n")
+leia (numero)
+  
+
+se (numero == sorteio){
+  escreva ("Acertou\n")
+  contador ++
 }
-senao {
-  escreva ("Errou")
+
+
+se(numero > sorteio){
+  escreva("É menor\n")
+  contador ++
 }
+
+se(numero < sorteio){
+  escreva("É maior\n")
+  contador ++
+}
+
+}
+
+
 }
 
 
