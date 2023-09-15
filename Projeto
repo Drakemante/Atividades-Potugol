@@ -17,48 +17,50 @@ programa {
     senao{
       reiniciar = falso
     }
-
-   
-   contador = 0
-
   }
 
   funcao inicio() {
     inteiro numero
-    sorteio = u.sorteia(1, 100)
-  escreva ("Olá\nVamos jogar\nVocê tem 10 chances para descobrir o número de 1 a 100\n")
+    contador = 0
 
-enquanto (contador < 10){
+    enquanto(reiniciar){
+      sorteio = u.sorteia(1, 100)
+      escreva ("Olá\nVamos jogar\nVocê tem 10 chances para descobrir o número de 1 a 100\n")
+
+      enquanto (contador < 10){
+        escreva ("digite um numero\n")
+        leia (numero)
   
-escreva ("digite um numero\n")
-leia (numero)
-  
-
-se (numero == sorteio){
-  escreva ("Acertou\n")
-  contador ++
-  reiniciar()
-}
+        se (numero == sorteio){ 
+            limpa()
+        escreva ("Parabéns você acertou\n")
+        contador ++
+        pare
+        }
 
 
-se(numero > sorteio){
-  escreva("É menor\n")
-  contador ++
-}
+        se(numero > sorteio){
+          limpa()
+        escreva("É menor\n")
+        contador ++
+        }
 
-se(numero < sorteio){
-  escreva("É maior\n")
-  contador ++
-}
+        se(numero < sorteio){
+          limpa()
+        escreva("É maior\n")
+        contador ++
+        }
 
-se(contador == 10){
-  escreva ("Desprovido de inteligencia\n")
-  reiniciar()
-}
-}
+        se(contador == 10){
+          limpa()
+        escreva ("Desprovido de inteligencia\n")
+        pare
+        }
+      }
+       reiniciar()
+    }
 
-}
-
+  }
 
 }
 
