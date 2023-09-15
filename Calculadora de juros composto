@@ -1,4 +1,4 @@
-// Calculadora de temperatura
+
 programa {
   inclua biblioteca Matematica --> mat
   caracter opcao //variavel que guarda a opção de operador escolhida
