@@ -1,0 +1,53 @@
+programa {
+ 
+    logico reiniciar = verdadeiro
+    cadeia respostaReiniciar
+
+     funcao inicio(){
+
+
+    inteiro x, valor = 1, divisores = 0
+
+    limpa()
+    escreva("Verificador de Números Primos\n\n")
+    escreva ("\nDigite um número para a verificação:\t")
+    leia (x)
+
+    se (x > 0){
+      enquanto (valor <= x){
+        se ( x % valor == 0){
+          divisores++
+          }
+        valor++
+       
+        }
+
+        se (divisores == 2) {
+          limpa()
+          escreva ("O número ", x,"\té primo!\n\n")
+         }
+        senao {
+          limpa()
+          escreva ("o número ", x,"\t não é primo!\n\n")
+               
+        } 
+      
+    }
+  }
+ funcao reiniciar(){
+enquanto(reiniciar){
+  inicio()
+    escreva("\n\nPara calcular novamente digite 's' ou 'sim' ou qualquer letra para finalizar\n")
+    escreva("Resposta:\t")
+    leia(respostaReiniciar)
+
+    se (respostaReiniciar == "s" ou respostaReiniciar == "S" ou respostaReiniciar == "sim" ou respostaReiniciar == "Sim" ou respostaReiniciar == "SIM"){
+      reiniciar = verdadeiro
+    }
+    senao{
+      reiniciar = falso
+    }
+}
+  }
+  }
+
