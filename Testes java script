@@ -1,0 +1,25 @@
+prompt()
+
+if (opcao == 1) [
+    operacao("Adição")
+    result = fator1 + fator2
+    console.log("\nO resultado é:\t", result, "\n")
+]
+
+if (opcao == 2) [
+    operacao("Subtração")
+    result = fator1 - fator2
+    console.log("\nO resultado é:\t", result, "\n")
+]
+
+if (opcao == 3) [
+    operacao("Multiplicação")
+    result = fator1 * fator2
+    console.log("\nO resultado é:\t", result, "\n")
+]
+
+if (opcao == 4) [
+    operacao("Divisão")
+    result = fator1 / fator2
+    console.log("\nO resultado é:\t", result, "\n")
+]
